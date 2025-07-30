@@ -14,6 +14,34 @@ body {
 	overflow: hidden;
 	width: 100vw;
 	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+/* Additional mobile-specific overflow prevention */
+@media (max-width: 768px) {
+	body {
+		overflow: hidden;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+	}
+	
+	html {
+		overflow: hidden;
+		height: 100vh;
+	}
+	
+	div._idGenObjectLayout-1 {
+		height: 100vh;
+		overflow: hidden;
+	}
+	
+	#_idContainer000 {
+		height: 100vh;
+		overflow: hidden;
+	}
 }
 div.Bloc-de-texte-standard {
 	border-style:solid;
@@ -57,11 +85,39 @@ span.CharOverride-1 {
 	span.CharOverride-1 {
 		font-size: 24px;
 	}
+	
+	/* Redistribute menu elements with more space */
+	#_idContainer001 {
+		left: 15%;
+		bottom: 25%;
+	}
+	#_idContainer002 {
+		left: 50%;
+		bottom: 25%;
+	}
+	#_idContainer003 {
+		left: 85%;
+		bottom: 25%;
+	}
 }
 
 @media (max-width: 480px) {
 	span.CharOverride-1 {
 		font-size: 20px;
+	}
+	
+	/* Even more spacing for smaller screens */
+	#_idContainer001 {
+		left: 10%;
+		bottom: 30%;
+	}
+	#_idContainer002 {
+		left: 50%;
+		bottom: 30%;
+	}
+	#_idContainer003 {
+		left: 90%;
+		bottom: 30%;
 	}
 }
 
@@ -69,10 +125,25 @@ span.CharOverride-1 {
 	span.CharOverride-1 {
 		font-size: 18px;
 	}
+	
+	/* Maximum spacing for very small screens */
+	#_idContainer001 {
+		left: 5%;
+		bottom: 35%;
+	}
+	#_idContainer002 {
+		left: 50%;
+		bottom: 35%;
+	}
+	#_idContainer003 {
+		left: 95%;
+		bottom: 35%;
+	}
 }
 
+/* Remove the old mobile positioning rules */
 /* Adjust horizontal spacing for smaller screens */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 	#_idContainer001 {
 		left: 20%;
 	}
@@ -94,7 +165,7 @@ span.CharOverride-1 {
 	#_idContainer003 {
 		left: 85%;
 	}
-}
+} */
 #_idContainer000 {
 	display:block;
 	height:100vh;
